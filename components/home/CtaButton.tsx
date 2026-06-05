@@ -22,7 +22,7 @@ export const QuoteButton = () => {
   return (
     <Link
       href="/contact"
-      className="flex items-center rounded-sm bg-white/70 px-6 py-4 text-base font-bold text-primary hover:bg-white/90 transition-all"
+      className="flex items-center  justify-center  rounded-sm bg-white/70 px-4 py-3 md:px-6 md:py-4 text-base font-bold text-primary hover:bg-white/90 transition-all"
     >
       Get a Free Quote
       <ArrowRight className="ml-2 size-5" />
