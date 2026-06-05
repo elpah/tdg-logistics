@@ -1,26 +1,65 @@
 import Link from "next/link";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 
-const footerLinks = {
-  services: [
-    { name: "Sea Freight", href: "/services#sea-freight" },
-    { name: "Air Freight", href: "/services#air-freight" },
-    { name: "Cargo Consolidation", href: "/services#consolidation" },
-    { name: "Customs Clearance", href: "/services#customs" },
-    { name: "Warehouse & Delivery", href: "/services#warehouse" },
-  ],
-  company: [
-    { name: "About Us", href: "/about" },
-    { name: "Our Services", href: "/services" },
-    { name: "Contact", href: "/contact" },
-  ],
-};
+const quickLinks = [
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "/about" },
+  { name: "Services", href: "/services" },
+  { name: "Contact", href: "/contact" },
+];
+
+function FooterHeading({ children }: { children: React.ReactNode }) {
+  return (
+    <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide">
+      {children}
+    </h3>
+  );
+}
+
+function FooterLink({
+  href,
+  children,
+}: {
+  href: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <Link
+      href={href}
+      className="text-sm text-primary-foreground/70 transition-colors hover:text-primary-foreground"
+    >
+      {children}
+    </Link>
+  );
+}
+
+function ContactItem({
+  icon: Icon,
+  label,
+  children,
+}: {
+  icon: React.ElementType;
+  label: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <li className="flex gap-3">
+      <Icon className="mt-0.5 size-4 shrink-0" />
+
+      <div>
+        <p className="text-sm text-primary-foreground/70">{label}</p>
+
+        {children}
+      </div>
+    </li>
+  );
+}
 
 export function Footer() {
   return (
-    <footer className="bg-primary text-primary-foreground">
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
+    <footer className="bg-primary text-primary-foreground px-6 py-16 lg:px-8">
+      <div className="mx-auto max-w-7xl ">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
           {/* Company */}
           <div>
             <Link href="/" className="flex items-center gap-3">
@@ -36,48 +75,21 @@ export function Footer() {
               </div>
             </Link>
 
-            <p className="mt-4 text-sm leading-relaxed text-primary-foreground/70">
+            <p className="mt-4 max-w-sm text-sm leading-relaxed text-primary-foreground/70">
               Your trusted partner for global shipping and logistics solutions.
               Delivering reliable freight forwarding, customs clearance, and
               supply chain services across international markets.
             </p>
           </div>
 
-          {/* Services */}
+          {/* Quick Links */}
           <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide">
-              Services
-            </h3>
+            <FooterHeading>Quick Links</FooterHeading>
 
             <ul className="space-y-3">
-              {footerLinks.services.map((link) => (
+              {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-primary-foreground/70 transition-colors hover:text-primary-foreground"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company Links */}
-          <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide">
-              Company
-            </h3>
-
-            <ul className="space-y-3">
-              {footerLinks.company.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-primary-foreground/70 transition-colors hover:text-primary-foreground"
-                  >
-                    {link.name}
-                  </Link>
+                  <FooterLink href={link.href}>{link.name}</FooterLink>
                 </li>
               ))}
             </ul>
@@ -85,68 +97,32 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide">
-              Contact Info
-            </h3>
+            <FooterHeading>Contact Information</FooterHeading>
 
             <ul className="space-y-5">
-              <li className="flex gap-3">
-                <Phone className="mt-0.5 size-4 shrink-0" />
+              <ContactItem icon={Phone} label="Call Us">
+                <a
+                  href="tel:+233597993709"
+                  className="text-sm font-medium transition-colors hover:text-white"
+                >
+                  +233 59 799 3709
+                </a>
+              </ContactItem>
 
-                <div>
-                  <p className="text-sm text-primary-foreground/70">Call Us</p>
+              <ContactItem icon={Mail} label="Email">
+                <a
+                  href="mailto:info@tdglogistics.com"
+                  className="text-sm font-medium transition-colors hover:text-white"
+                >
+                  info@tdglogistics.com
+                </a>
+              </ContactItem>
 
-                  <a
-                    href="tel:+233597993709"
-                    className="text-sm font-medium transition-colors hover:text-white"
-                  >
-                    +233 59 799 3709
-                  </a>
-                </div>
-              </li>
-
-              <li className="flex gap-3">
-                <Mail className="mt-0.5 size-4 shrink-0" />
-
-                <div>
-                  <p className="text-sm text-primary-foreground/70">Email</p>
-
-                  <a
-                    href="mailto:info@tdglogistics.com"
-                    className="text-sm font-medium transition-colors hover:text-white"
-                  >
-                    info@tdglogistics.com
-                  </a>
-                </div>
-              </li>
-
-              <li className="flex gap-3">
-                <MapPin className="mt-0.5 size-4 shrink-0" />
-
-                <div>
-                  <p className="text-sm text-primary-foreground/70">Office</p>
-
-                  <p className="text-sm font-medium">Accra, Ghana</p>
-                </div>
-              </li>
+              <ContactItem icon={MapPin} label="Office">
+                <p className="text-sm font-medium">Accra, Ghana</p>
+              </ContactItem>
             </ul>
           </div>
-        </div>
-        {/* CTA Section */}
-        <div className="mt-12 rounded-xl border border-primary-foreground/10 bg-white/10 p-8 text-center">
-          <h3 className="text-2xl font-semibold">Need a Shipping Solution?</h3>
-
-          <p className="mx-auto mt-3 max-w-2xl text-sm text-primary-foreground/70">
-            Whether you need sea freight, air freight, customs clearance, or
-            end-to-end logistics support, our team is ready to help.
-          </p>
-
-          <Link
-            href="/contact"
-            className="mt-6 inline-flex items-center justify-center rounded-sm bg-white px-6 py-3 font-medium text-primary transition-colors hover:bg-white/90"
-          >
-            Request a Quote
-          </Link>
         </div>
 
         {/* Bottom */}
@@ -156,19 +132,9 @@ export function Footer() {
           </p>
 
           <div className="flex gap-6">
-            <Link
-              href="/privacy"
-              className="text-sm text-primary-foreground/60 transition-colors hover:text-primary-foreground"
-            >
-              Privacy Policy
-            </Link>
+            <FooterLink href="/privacy">Privacy Policy</FooterLink>
 
-            <Link
-              href="/terms"
-              className="text-sm text-primary-foreground/60 transition-colors hover:text-primary-foreground"
-            >
-              Terms of Service
-            </Link>
+            <FooterLink href="/terms">Terms of Service</FooterLink>
           </div>
         </div>
       </div>
