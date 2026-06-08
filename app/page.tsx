@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Ship, Plane, Package, Warehouse } from "lucide-react";
-
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { ServiceCard } from "@/components/home/ServiceCard";
 import { ProcessStep } from "@/components/home/ProcessStep";
@@ -89,12 +88,12 @@ export default function Home() {
             <div className="mx-auto w-full max-w-7xl ">
               <div className="max-w-3xl">
                 {/* Badge */}
-                <span className="inline-flex rounded-full bg-white/10 px-2 py-1 text-xs md:text-sm md:py-2 font-medium text-white backdrop-blur-sm">
+                <span className="inline-flex rounded-full bg-white/10 px-4 py-1 text-xs md:text-sm md:py-2 font-medium text-white backdrop-blur-sm">
                   Global Logistics Solutions
                 </span>
 
                 {/* Heading */}
-                <h1 className="mt-6 font-extrabold tracking-tight text-primary-foreground text-4xl sm:text-5xl md:text-6xl lg:text-7xl lg:leading-[1.2]">
+                <h1 className="mt-6 font-extrabold tracking-normal text-primary-foreground text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.2]">
                   Simplifying Imports
                   <br />
                   from China to Ghana{" "}
