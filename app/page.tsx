@@ -2,11 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Ship, Plane, Package, Warehouse } from "lucide-react";
 
-import { SectionHeader } from "@/components/home/SectionHeader";
+import { SectionHeader } from "@/components/shared/SectionHeader";
 import { ServiceCard } from "@/components/home/ServiceCard";
 import { ProcessStep } from "@/components/home/ProcessStep";
 import { ChecklistItem } from "@/components/home/ChecklistItem";
 import { SecondaryButton, QuoteButton } from "@/components/home/CtaButton";
+import CTA from "@/components/shared/CTA";
 
 const services = [
   {
@@ -94,15 +95,16 @@ export default function Home() {
 
                 {/* Heading */}
                 <h1 className="mt-6 font-extrabold tracking-tight text-primary-foreground text-4xl sm:text-5xl md:text-6xl lg:text-7xl lg:leading-[1.2]">
-                  Moving Your Cargo
+                  Simplifying Imports
                   <br />
-                  Across the World
+                  from China to Ghana{" "}
                 </h1>
 
                 {/* Description */}
                 <p className="mt-6 max-w-2xl text-sm sm:text-lg leading-relaxed text-primary-foreground/80 md:text-xl">
-                  Reliable sea and air freight services with real-time tracking.
-                  From pickup to delivery, we handle it all.
+                  Whether you're buying from factories, wholesalers, or online
+                  marketplaces, our team receives, stores, and ships your goods
+                  safely from China to Ghana.
                 </p>
 
                 {/* CTA Buttons */}
@@ -212,31 +214,12 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="px-6 py-24 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <div className="rounded-3xl bg-primary px-8 py-16 text-center shadow-xl md:px-16">
-            <h2 className="mt-6 text-4xl font-bold tracking-tight text-primary-foreground md:text-5xl">
-              Ready to Ship Your Cargo?
-            </h2>
-
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-primary-foreground/80">
-              Whether you're moving a single shipment or managing a complex
-              supply chain, our logistics experts are ready to help. Get a fast,
-              transparent quote tailored to your business needs.
-            </p>
-
-            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <QuoteButton />
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-sm border border-white/20 px-6 py-4 text-base font-medium text-primary-foreground transition-all hover:bg-white/10"
-              >
-                Contact Us
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CTA
+        title=" Ready to Ship Your Cargo?"
+        paragraph=" Whether you're moving a single shipment or managing a complex supply
+            chain, our logistics experts are ready to help. Get a fast,
+            transparent quote tailored to your business needs."
+      />
     </main>
   );
 }
