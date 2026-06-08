@@ -93,7 +93,7 @@ export default function Home() {
                 </span>
 
                 {/* Heading */}
-                <h1 className="mt-6 font-extrabold tracking-tight text-primary-foreground text-3xl sm:text-5xl md:text-6xl lg:text-7xl lg:leading-[1.2]">
+                <h1 className="mt-6 font-extrabold tracking-tight text-primary-foreground text-4xl sm:text-5xl md:text-6xl lg:text-7xl lg:leading-[1.2]">
                   Moving Your Cargo
                   <br />
                   Across the World
@@ -161,7 +161,7 @@ export default function Home() {
                 <ProcessStep {...step} />
 
                 {index < steps.length - 1 && (
-                  <div className="absolute top-8 left-[80%] hidden w-[40%] border-t-2 border-dashed border-primary/20 lg:block" />
+                  <div className="absolute top-8 left-[50%] hidden w-[40%] border-t-2 border-dashed border-primary/20 lg:block" />
                 )}
               </div>
             ))}
