@@ -1,28 +1,49 @@
-import React from "react";
+import Image from "next/image";
 
 type HeroProps = {
   header: string;
   title: string;
   paragraph: string;
+  image?: string;
 };
-const HeroSection = ({ header, title, paragraph }: HeroProps) => {
+
+export default function HeroSection({
+  header,
+  title,
+  paragraph,
+  image,
+}: HeroProps) {
   return (
-    <section className="px-6 pb-20 pt-32 lg:px-8">
-      <div className="mx-auto max-w-7xl">
-        <div className="max-w-3xl">
-          <p className="mb-4 font-medium text-primary">{header}</p>
+    <section className="relative h-150 overflow-hidden mt-20">
+      {image && (
+        <Image
+          src={image}
+          alt="Global shipping and logistics operations"
+          fill
+          priority
+          className="object-cover"
+        />
+      )}
 
-          <h1 className="text-4xl font-bold leading-tight text-foreground md:text-5xl">
-            {title}
-          </h1>
+      <div className="absolute inset-0 bg-linear-to-r from-primary/90 via-primary/80 to-primary/30" />
 
-          <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-            {paragraph}
-          </p>
+      <div className="relative z-10 flex h-full items-center">
+        <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
+          <div className="max-w-3xl ">
+            <p className="inline-flex rounded-lg bg-white/10 px-4 py-1 text-xs md:text-sm md:py-2 font-medium text-white backdrop-blur-sm">
+              {header}
+            </p>
+
+            <h1 className="mt-6 font-extrabold tracking-tight text-primary-foreground text-4xl sm:text-5xl md:text-6xl lg:text-7xl lg:leading-[1.2]">
+              {title}
+            </h1>
+
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-primary-foreground/80">
+              {paragraph}
+            </p>
+          </div>
         </div>
       </div>
     </section>
   );
-};
-
-export default HeroSection;
+}
