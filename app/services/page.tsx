@@ -214,7 +214,7 @@ export default function ServicesPage() {
                     key={type}
                     className="flex items-center gap-3 p-4 bg-background rounded-lg border border-border"
                   >
-                    <Truck className="size-5 text-primary flex-shrink-0" />
+                    <Truck className="size-5 text-primary shrink-0" />
                     <span className="text-foreground text-sm">{type}</span>
                   </div>
                 ))}
