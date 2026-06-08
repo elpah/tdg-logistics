@@ -196,7 +196,7 @@ export default function Home() {
                 time. Our commitment to excellence sets us apart.
               </p>
 
-              <ul className="space-y-4">
+              <ul className="space-y-4 grid gap-2 md:grid-cols-2  ">
                 {reasons.map((reason) => (
                   <ChecklistItem key={reason}>{reason}</ChecklistItem>
                 ))}
