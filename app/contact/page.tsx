@@ -91,18 +91,18 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
-      {/* Map Placeholder */}
-      <section className="py-12 px-6 lg:px-8 bg-secondary">
+      <section className="bg-secondary px-6 py-12 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="relative h-100 rounded-2xl overflow-hidden bg-muted flex items-center justify-center">
-            <div className="text-center">
-              <MapPin className="size-12 text-muted-foreground mx-auto mb-4" />
-              <p className="text-muted-foreground">
-                Interactive map would go here
-              </p>
-              <p className="text-sm text-muted-foreground">123 Accra Address</p>
-            </div>
+          <div className="overflow-hidden rounded-2xl">
+            <iframe
+              title="Our location"
+              src="https://www.google.com/maps?q=Stationsstraat+75,+Zaandam,+Netherlands&output=embed"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </div>
       </section>
