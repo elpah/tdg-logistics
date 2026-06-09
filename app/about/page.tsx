@@ -103,7 +103,7 @@ export default function AboutPage() {
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div className="relative h-100 overflow-hidden rounded-2xl">
               <Image
-                src="/images/team.jpg"
+                src="https://res.cloudinary.com/dvwpuenzk/image/upload/v1780969762/team_u6czmq.avif"
                 alt="Our team at work"
                 fill
                 className="object-cover"
