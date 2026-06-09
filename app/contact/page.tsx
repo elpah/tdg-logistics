@@ -39,10 +39,11 @@ export default function ContactPage() {
         title="Get in Touch"
         paragraph=" Have questions about our services? Need a quote? We are here to
               help. Reach out and our team will get back to you promptly."
+        image="https://res.cloudinary.com/dvwpuenzk/image/upload/v1780969714/contact_pyxcqi.avif"
       />
 
       {/* Contact Grid */}
-      <section className="pb-20 px-6 lg:px-8">
+      <section className="pb-20 px-6 lg:px-8 mt-20">
         <div className="mx-auto max-w-7xl">
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Contact Info */}
