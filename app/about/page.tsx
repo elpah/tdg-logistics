@@ -49,11 +49,9 @@ const gallery = [
 function StatCard({ value, label }: { value: string; label: string }) {
   return (
     <div className="text-center">
-      <p className="text-4xl font-bold text-primary-foreground md:text-5xl">
-        {value}
-      </p>
+      <p className="text-4xl font-bold text-foreground md:text-5xl">{value}</p>
 
-      <p className="mt-2 text-primary-foreground/70">{label}</p>
+      <p className="mt-2 text-primary">{label}</p>
     </div>
   );
 }
@@ -81,10 +79,11 @@ export default function AboutPage() {
         paragraph="TDG Shipping & Logistics was founded with a simple mission: to make
         global shipping accessible, reliable, and stress-free for businesses
         of all sizes."
+        image="https://res.cloudinary.com/dvwpuenzk/image/upload/v1780969712/about_uyq8wo.avif"
       />
 
       {/* Stats */}
-      <section className="bg-primary px-6 py-16 lg:px-8">
+      <section className="bg-secondary px-6 py-16 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
             {stats.map((stat) => (
