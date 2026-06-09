@@ -73,7 +73,7 @@ export default function Home() {
       <section className="relative pt-20">
         <div className="relative min-h-175 lg:min-h-200 w-full overflow-hidden">
           <Image
-            src="/images/hero-port.jpg"
+            src="https://res.cloudinary.com/dvwpuenzk/image/upload/v1780970061/home_e5rxhi.avif"
             alt="Global shipping and logistics operations"
             fill
             priority
@@ -176,9 +176,10 @@ export default function Home() {
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div className="relative h-100 overflow-hidden rounded-2xl lg:h-125">
               <Image
-                src="/images/fleet.jpg"
+                src="https://res.cloudinary.com/dvwpuenzk/image/upload/v1780969759/fleet_rlsi9z.avif"
                 alt="Fleet of delivery trucks"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>
