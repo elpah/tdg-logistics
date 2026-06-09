@@ -26,7 +26,8 @@ const services = [
       "Refrigerated container options",
       "Real-time container tracking",
     ],
-    image: "/images/sea-freight.jpg",
+    image:
+      "https://res.cloudinary.com/dvwpuenzk/image/upload/v1780969761/sea-freight_trlk3q.avif",
   },
   {
     id: "air-freight",
@@ -41,7 +42,8 @@ const services = [
       "Charter services for urgent cargo",
       "Airport-to-airport and door-to-door",
     ],
-    image: "/images/air-freight.jpg",
+    image:
+      "https://res.cloudinary.com/dvwpuenzk/image/upload/v1780969758/air-freight_onsh93.avif",
   },
   {
     id: "consolidation",
@@ -56,7 +58,8 @@ const services = [
       "Flexible pickup and delivery",
       "Detailed shipment documentation",
     ],
-    image: "/images/warehouse.jpg",
+    image:
+      "https://res.cloudinary.com/dvwpuenzk/image/upload/v1780969764/warehouse_lcc4yg.avif",
   },
   {
     id: "customs",
@@ -71,7 +74,8 @@ const services = [
       "Documentation preparation",
       "Compliance consulting",
     ],
-    image: "/images/hero-port.jpg",
+    image:
+      "https://res.cloudinary.com/dvwpuenzk/image/upload/v1780969760/hero-port_g2x3i5.avif",
   },
   {
     id: "warehouse",
@@ -86,7 +90,8 @@ const services = [
       "Last-mile delivery",
       "Home delivery options",
     ],
-    image: "/images/fleet.jpg",
+    image:
+      "https://res.cloudinary.com/dvwpuenzk/image/upload/v1780969759/fleet_rlsi9z.avif",
   },
 ];
 const timelines = [
@@ -115,9 +120,10 @@ export default function ServicesPage() {
       {/* Hero */}
       <HeroSection
         header="Our Services"
-        title="Complete Logistics Solutions for Your Business"
+        title="Reliable Logistics Services"
         paragraph=" From sea and air freight to customs clearance and last-mile
               delivery, we offer end-to-end services tailored to your needs."
+        image="https://res.cloudinary.com/dvwpuenzk/image/upload/v1780969714/services_m9o094.avif"
       />
 
       {/* Services List */}
@@ -159,6 +165,7 @@ export default function ServicesPage() {
                   src={service.image}
                   alt={service.title}
                   fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
                 />
               </div>
