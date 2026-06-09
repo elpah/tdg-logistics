@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 type HeroProps = {
-  header: string;
+  header?: string;
   title: string;
   paragraph: string;
   image?: string;
@@ -21,18 +21,21 @@ export default function HeroSection({
           alt="Global shipping and logistics operations"
           fill
           priority
+          sizes="100vw"
           className="object-cover"
         />
       )}
 
       <div className="absolute inset-0 bg-linear-to-r from-primary/90 via-primary/80 to-primary/30" />
 
-      <div className="relative z-10 flex h-full items-center">
-        <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
+      <div className="relative z-10 flex h-full items-center px-6 lg:px-8">
+        <div className="mx-auto w-full max-w-7xl ">
           <div className="max-w-3xl ">
-            <p className="inline-flex rounded-lg bg-white/10 px-4 py-1 text-xs md:text-sm md:py-2 font-medium text-white backdrop-blur-sm">
-              {header}
-            </p>
+            {header && (
+              <p className="inline-flex rounded-lg bg-white/10 px-4 py-1 text-xs md:text-sm md:py-2 font-medium text-white backdrop-blur-sm">
+                {header}
+              </p>
+            )}
 
             <h1 className="mt-6 font-extrabold tracking-tight text-primary-foreground text-4xl sm:text-5xl md:text-6xl lg:text-7xl lg:leading-[1.2]">
               {title}
