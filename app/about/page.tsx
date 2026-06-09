@@ -40,10 +40,26 @@ const values = [
 ];
 
 const gallery = [
-  { src: "/images/warehouse.jpg", alt: "Modern warehouse facility" },
-  { src: "/images/sea-freight.jpg", alt: "Cargo ship at sea" },
-  { src: "/images/air-freight.jpg", alt: "Air cargo aircraft" },
-  { src: "/images/fleet.jpg", alt: "Delivery fleet" },
+  {
+    src:
+      "https://res.cloudinary.com/dvwpuenzk/image/upload/v1780969764/warehouse_lcc4yg.avif",
+    alt: "Modern warehouse facility",
+  },
+  {
+    src:
+      "https://res.cloudinary.com/dvwpuenzk/image/upload/v1780969761/sea-freight_trlk3q.avif",
+    alt: "Cargo ship at sea",
+  },
+  {
+    src:
+      "https://res.cloudinary.com/dvwpuenzk/image/upload/v1780969758/air-freight_onsh93.avif",
+    alt: "Air cargo aircraft",
+  },
+  {
+    src:
+      "https://res.cloudinary.com/dvwpuenzk/image/upload/v1780969759/fleet_rlsi9z.avif",
+    alt: "Delivery fleet",
+  },
 ];
 
 function StatCard({ value, label }: { value: string; label: string }) {
