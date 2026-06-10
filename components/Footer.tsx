@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { footer } from "framer-motion/client";
 
 const quickLinks = [
   { name: "Home", href: "/" },
@@ -55,7 +56,7 @@ function ContactItem({
   );
 }
 
-export function Footer() {
+const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground px-6 py-16 lg:px-8">
       <div className="mx-auto max-w-7xl ">
@@ -140,4 +141,6 @@ export function Footer() {
       </div>
     </footer>
   );
-}
+};
+
+export default footer;

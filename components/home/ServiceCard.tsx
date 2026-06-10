@@ -19,12 +19,7 @@ interface ServiceCardProps {
   index: number;
 }
 
-export function ServiceCard({
-  icon,
-  title,
-  description,
-  index,
-}: ServiceCardProps) {
+const ServiceCard = ({ icon, title, description, index }: ServiceCardProps) => {
   const Icon = icons[icon];
 
   return (
@@ -58,4 +53,6 @@ export function ServiceCard({
       </p>
     </motion.div>
   );
-}
+};
+
+export default ServiceCard;

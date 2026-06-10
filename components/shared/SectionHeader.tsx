@@ -3,12 +3,7 @@ interface SectionHeaderProps {
   title: string;
   description?: string;
 }
-
-export function SectionHeader({
-  eyebrow,
-  title,
-  description,
-}: SectionHeaderProps) {
+const SectionHeader = ({ eyebrow, title, description }: SectionHeaderProps) => {
   return (
     <div className="mx-auto mb-10 max-w-2xl text-center">
       <p className="mb-2 font-medium text-primary">{eyebrow}</p>
@@ -22,4 +17,6 @@ export function SectionHeader({
       )}
     </div>
   );
-}
+};
+
+export default SectionHeader;

@@ -9,12 +9,12 @@ interface ProcessStepProps {
   index: number;
 }
 
-export function ProcessStep({
+const ProcessStep = ({
   number,
   title,
   description,
   index,
-}: ProcessStepProps) {
+}: ProcessStepProps) => {
   return (
     <motion.div
       initial={{
@@ -41,4 +41,5 @@ export function ProcessStep({
       </p>
     </motion.div>
   );
-}
+};
+export default ProcessStep;

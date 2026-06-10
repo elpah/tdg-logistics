@@ -1,7 +1,6 @@
 "use client";
-
-import { SectionHeader } from "../shared/SectionHeader";
-import { ProcessStep } from "./ProcessStep";
+import HomeSectionHeader from "./HomeSectionHeader";
+import ProcessStep from "./ProcessStep";
 
 interface ProcessStepProps {
   number: string;
@@ -17,7 +16,7 @@ const HowItWorksSection = ({ steps }: HowItWorksSectionProps) => {
   return (
     <section className="bg-secondary px-6 py-20 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <SectionHeader
+        <HomeSectionHeader
           eyebrow="Simple Process"
           title="How It Works"
           description="Getting your cargo shipped is easier than you think"

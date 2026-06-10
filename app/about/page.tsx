@@ -1,9 +1,9 @@
 import Image from "next/image";
 import { Target, Eye, Users, Award, Globe, Clock } from "lucide-react";
 
-import { SectionHeader } from "@/components/shared/SectionHeader";
 import HeroSection from "@/components/shared/HeroSection";
 import FeatureCard from "@/components/about/FeatureCard";
+import SectionHeader from "@/components/shared/SectionHeader";
 
 const stats = [
   { value: "15+", label: "Years Experience" },

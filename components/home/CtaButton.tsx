@@ -1,13 +1,13 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-export function SecondaryButton({
+export const SecondaryButton =({
   href,
   children,
 }: {
   href: string;
   children: React.ReactNode;
-}) {
+})=> {
   return (
     <Link
       href={href}

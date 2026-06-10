@@ -12,7 +12,7 @@ const navigation = [
   { name: "Contact", href: "/contact" },
 ];
 
-export function Navbar() {
+const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
@@ -117,4 +117,6 @@ export function Navbar() {
       )}
     </header>
   );
-}
+};
+
+export default Navbar;

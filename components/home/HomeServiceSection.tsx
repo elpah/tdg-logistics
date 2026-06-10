@@ -1,9 +1,9 @@
 "use client";
-
+import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { SectionHeader } from "../shared/SectionHeader";
 import { SecondaryButton } from "./CtaButton";
-import { ServiceCard, type ServiceIcon } from "./ServiceCard";
+import ServiceCard, {type ServiceIcon } from "./ServiceCard";
+import HomeSectionHeader from "./HomeSectionHeader";
 
 type Service = {
   icon: ServiceIcon;
@@ -21,7 +21,7 @@ const HomeServiceSection = ({
   return (
     <section className="px-6 py-20 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <SectionHeader
+        <HomeSectionHeader
           eyebrow="What We Offer"
           title="Comprehensive Logistics Services"
           description="End-to-end solutions tailored to your shipping needs"
@@ -39,12 +39,28 @@ const HomeServiceSection = ({
           ))}
         </div>
 
-        <div className="mt-10 text-center">
+        <motion.div className="mt-10 text-center"
+              initial={{
+                opacity: 0,
+                y: 30,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{
+                once: true,
+                amount: 0.2,
+              }}
+              transition={{
+                duration: 0.6,
+                delay: 0.2,
+              }}>
           <SecondaryButton href="/services">
             View All Services
             <ArrowRight className="ml-2 size-4" />
           </SecondaryButton>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
