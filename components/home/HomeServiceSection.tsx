@@ -15,9 +15,9 @@ interface HomeServiceSectionProps {
   services: readonly Service[];
 }
 
-export default function HomeServiceSection({
+const HomeServiceSection = ({
   services,
-}: HomeServiceSectionProps) {
+}: HomeServiceSectionProps)=> {
   return (
     <section className="px-6 py-20 lg:px-8">
       <div className="mx-auto max-w-7xl">
@@ -49,3 +49,4 @@ export default function HomeServiceSection({
     </section>
   );
 }
+export default HomeServiceSection
