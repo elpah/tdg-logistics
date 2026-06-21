@@ -15,7 +15,7 @@ import Footer from "@/components/Footer";
 // });
 
 export const metadata: Metadata = {
-  title: "TDG Logistics",
+  title: "TDG's Logistics",
   description: "Logistics Company",
 };
 

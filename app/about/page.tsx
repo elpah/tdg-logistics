@@ -4,13 +4,7 @@ import { Target, Eye, Users, Award, Globe, Clock } from "lucide-react";
 import HeroSection from "@/components/shared/HeroSection";
 import FeatureCard from "@/components/about/FeatureCard";
 import SectionHeader from "@/components/shared/SectionHeader";
-
-const stats = [
-  { value: "15+", label: "Years Experience" },
-  { value: "50+", label: "Countries Served" },
-  { value: "10K+", label: "Shipments Delivered" },
-  { value: "98%", label: "Customer Satisfaction" },
-];
+import Stats from "@/components/about/Stats";
 
 const values = [
   {
@@ -62,16 +56,6 @@ const gallery = [
   },
 ];
 
-function StatCard({ value, label }: { value: string; label: string }) {
-  return (
-    <div className="text-center">
-      <p className="text-4xl font-bold text-foreground md:text-5xl">{value}</p>
-
-      <p className="mt-2 text-primary">{label}</p>
-    </div>
-  );
-}
-
 function GalleryImage({ src, alt }: { src: string; alt: string }) {
   return (
     <div className="group relative h-48 overflow-hidden rounded-xl md:h-64">
@@ -92,26 +76,14 @@ export default function AboutPage() {
       <HeroSection
         header="About Us"
         title="Your Partner in Global Logistics"
-        paragraph="TDG Shipping & Logistics was founded with a simple mission: to make
+        paragraph="TDG's Shipping & Logistics was founded with a simple mission: to make
         global shipping accessible, reliable, and stress-free for businesses
         of all sizes."
         image="https://res.cloudinary.com/dvwpuenzk/image/upload/v1780969712/about_uyq8wo.avif"
       />
 
       {/* Stats */}
-      <section className="bg-secondary px-6 py-16 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
-            {stats.map((stat) => (
-              <StatCard
-                key={stat.label}
-                value={stat.value}
-                label={stat.label}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
+      <Stats />
 
       {/* Story */}
       <section className="px-6 py-20 lg:px-8">

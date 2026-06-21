@@ -34,7 +34,7 @@ const Navbar = () => {
               </span>
 
               <span className="hidden font-semibold tracking-tight md:block">
-                TDG Shipping & Logistics
+                TDG's Shipping & Logistics
               </span>
             </div>
           </Link>

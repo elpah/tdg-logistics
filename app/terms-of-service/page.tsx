@@ -10,7 +10,7 @@ const sections = [
   {
     title: "2. Services",
     body: [
-      "tdg Logistics provides freight forwarding, cargo consolidation, customs clearance, warehousing, and delivery services. The specific terms of each engagement will be defined in a separate service agreement or quotation.",
+      "TDG's Logistics provides freight forwarding, cargo consolidation, customs clearance, warehousing, and delivery services. The specific terms of each engagement will be defined in a separate service agreement or quotation.",
       "We reserve the right to refuse service, modify our offerings, or discontinue services at our discretion.",
     ],
   },
@@ -50,19 +50,19 @@ const sections = [
   {
     title: "8. Intellectual Property",
     body: [
-      "All content on our website, including text, graphics, logos, and images, is the property of tdg Logistics and protected by intellectual property laws. You may not use our content without prior written permission.",
+      "All content on our website, including text, graphics, logos, and images, is the property of TDG's Logistics and protected by intellectual property laws. You may not use our content without prior written permission.",
     ],
   },
   {
     title: "9. Governing Law",
     body: [
-      "These Terms of Service are governed by the laws of the jurisdiction in which tdg Logistics operates. Any disputes shall be resolved in the courts of that jurisdiction.",
+      "These Terms of Service are governed by the laws of the jurisdiction in which TDG's Logistics operates. Any disputes shall be resolved in the courts of that jurisdiction.",
     ],
   },
   {
     title: "10. Contact Us",
     body: [
-      "If you have any questions about these Terms of Service, please contact us at hello@tdglogistics.com or +1 (555) 123-4567.",
+      "If you have any questions about these Terms of Service, please contact us at hello@tdgslogistics.com or +1 (555) 123-4567.",
     ],
   },
 ];

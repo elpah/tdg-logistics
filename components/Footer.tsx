@@ -69,7 +69,7 @@ const Footer = () => {
               </div>
 
               <div>
-                <p className="font-semibold">TDG Logistics</p>
+                <p className="font-semibold">TDG's Logistics</p>
                 <p className="text-xs text-primary-foreground/70">
                   Shipping & Freight Solutions
                 </p>
@@ -129,7 +129,7 @@ const Footer = () => {
         {/* Bottom */}
         <div className="mt-12 flex flex-col gap-4 border-t border-primary-foreground/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm text-primary-foreground/60">
-            © {new Date().getFullYear()} TDG Logistics. All rights reserved.
+            © {new Date().getFullYear()} TDG's Logistics. All rights reserved.
           </p>
 
           <div className="flex gap-6">
