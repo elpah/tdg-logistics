@@ -111,10 +111,10 @@ const Footer = () => {
 
               <ContactItem icon={Mail} label="Email">
                 <a
-                  href="mailto:info@tdglogistics.com"
+                  href="mailto:info@tdgslogistics.com"
                   className="text-sm font-medium transition-colors hover:text-white"
                 >
-                  info@tdglogistics.com
+                  info@tdgslogistics.com
                 </a>
               </ContactItem>
 

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, Contact } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navigation = [
@@ -80,9 +80,11 @@ const Navbar = () => {
               <Phone className="w-4 h-4" />
               <span>+233 12 345 6789</span>
             </a>
-            <button className="cursor-pointer rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition-all hover:bg-primary/90 hover:shadow-md active:scale-95">
-              Request Quote
-            </button>
+            <Link href="/contact">
+              <button className="cursor-pointer rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition-all hover:bg-primary/90 hover:shadow-md active:scale-95">
+                Request Quote
+              </button>
+            </Link>
           </div>
 
           {/* Mobile Toggle */}
@@ -166,12 +168,14 @@ const Navbar = () => {
                   <Phone className="w-4 h-4" />
                   +233 12 345 6789
                 </a>
-                <button
-                  className="w-full rounded-lg bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground shadow-sm active:scale-[0.98] transition-transform"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  Request Quote
-                </button>
+                <Link href="/contact">
+                  <button
+                    className="w-full rounded-lg bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground shadow-sm active:scale-[0.98] transition-transform"
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Request Quote
+                  </button>
+                </Link>
               </div>
             </div>
           </motion.div>

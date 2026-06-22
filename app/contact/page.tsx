@@ -13,7 +13,7 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "info@tdglogistics.com",
+    value: "info@tdgslogistics.com",
     description: "We reply within 24 hours",
   },
   {
