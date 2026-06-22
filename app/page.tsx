@@ -1,7 +1,3 @@
-import { ArrowRight, Ship, Plane, Package, Warehouse } from "lucide-react";
-// import { SectionHeader } from "@/components/shared/SectionHeader";
-// import { ChecklistItem } from "@/components/home/ChecklistItem";
-// import { SecondaryButton } from "@/components/home/CtaButton";
 import CTA from "@/components/shared/CTA";
 import HomeHero from "@/components/home/HomeHero";
 import HomeServiceSection from "@/components/home/HomeServiceSection";
