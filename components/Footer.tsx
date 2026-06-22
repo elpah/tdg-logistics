@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Mail, MapPin, Phone } from "lucide-react";
-import { footer } from "framer-motion/client";
-
+import Image from "next/image";
 const quickLinks = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
@@ -63,16 +62,16 @@ const Footer = () => {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
           {/* Company */}
           <div>
-            <Link href="/" className="flex items-center gap-3">
-              <div className="flex size-10 items-center justify-center rounded-sm bg-white">
-                <span className="font-bold text-primary">TDG</span>
-              </div>
-
-              <div>
-                <p className="font-semibold">TDG's Logistics</p>
-                <p className="text-xs text-primary-foreground/70">
-                  Shipping & Freight Solutions
-                </p>
+            <Link href="/" className="  flex items-start shrink-0">
+              <div className="relative bg-white rounded w-28 h-10 sm:w-32 sm:h-12 lg:h-16">
+                <Image
+                  src="https://res.cloudinary.com/dvwpuenzk/image/upload/v1782091880/tdd_logo_ksizmd.png"
+                  alt="TDG Shipping & Logistics"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-contain"
+                  priority
+                />
               </div>
             </Link>
 

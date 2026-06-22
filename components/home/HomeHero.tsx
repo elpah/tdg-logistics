@@ -6,9 +6,11 @@ import Image from "next/image";
 
 import { QuoteButton } from "./CtaButton";
 
+const easeOutExpo = [0.22, 1, 0.36, 1] as const;
+
 const HomeHero = () => {
   return (
-    <section className="relative pt-20">
+    <section className="relative pt-14 lg:pt-20">
       <div className="relative min-h-175 w-full overflow-hidden lg:min-h-200">
         {/* Background Image */}
         <div className="absolute inset-0">
@@ -16,6 +18,7 @@ const HomeHero = () => {
             src="https://res.cloudinary.com/dvwpuenzk/image/upload/v1780970061/home_e5rxhi.avif"
             alt="Global shipping and logistics operations"
             fill
+            sizes="100vw"
             priority
             className="object-cover"
           />
@@ -32,29 +35,35 @@ const HomeHero = () => {
               <motion.span
                 initial={{ opacity: 0, y: 25 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                transition={{ duration: 0.6, delay: 0.2, ease: easeOutExpo }}
                 className="inline-flex rounded-full bg-white/10 px-4 py-1 text-xs font-medium text-white backdrop-blur-sm md:py-2 md:text-sm"
               >
                 Global Logistics Solutions
               </motion.span>
 
               {/* Heading */}
-              <motion.h1
-                initial={{ opacity: 0, y: 25 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="mt-6 text-4xl font-extrabold leading-[1.2] tracking-normal text-primary-foreground sm:text-5xl md:text-6xl lg:text-7xl"
+              <motion.div
+                initial={{ y: 25 }}
+                animate={{ y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4, ease: easeOutExpo }}
               >
-                Simplifying Imports
-                <br />
-                from China to Ghana
-              </motion.h1>
+                <motion.h1
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.8, delay: 0.4, ease: easeOutExpo }}
+                  className="mt-6 text-4xl font-extrabold leading-[1.2] tracking-normal text-primary-foreground sm:text-5xl md:text-6xl lg:text-7xl"
+                >
+                  Simplifying Imports
+                  <br />
+                  from China to Ghana
+                </motion.h1>
+              </motion.div>
 
               {/* Description */}
               <motion.p
                 initial={{ opacity: 0, y: 25 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.7 }}
+                transition={{ duration: 0.6, delay: 0.7, ease: easeOutExpo }}
                 className="mt-6 max-w-2xl text-sm leading-relaxed text-primary-foreground/80 sm:text-lg md:text-xl"
               >
                 Whether you're buying from factories, wholesalers, or online
@@ -66,14 +75,14 @@ const HomeHero = () => {
               <motion.div
                 initial={{ opacity: 0, y: 25 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 1 }}
+                transition={{ duration: 0.6, delay: 1, ease: easeOutExpo }}
                 className="mt-8 flex flex-col gap-4 sm:flex-row"
               >
                 <QuoteButton />
 
                 <Link
                   href="/services"
-                  className="inline-flex items-center justify-center rounded-sm bg-white/10 px-6 py-4 text-base font-medium text-white backdrop-blur-sm transition-all duration-300 hover:bg-white/20"
+                  className="inline-flex items-center justify-center rounded-sm bg-white/10 px-6 py-4 text-base font-medium text-white backdrop-blur-sm transition-colors hover:bg-white/20"
                 >
                   Our Services
                 </Link>

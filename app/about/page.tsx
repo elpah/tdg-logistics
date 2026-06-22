@@ -63,6 +63,7 @@ function GalleryImage({ src, alt }: { src: string; alt: string }) {
         src={src}
         alt={alt}
         fill
+        sizes="(max-width: 768px) 100vw, 50vw"
         className="object-cover transition-transform duration-500 group-hover:scale-105"
       />
     </div>
@@ -94,6 +95,7 @@ export default function AboutPage() {
                 src="https://res.cloudinary.com/dvwpuenzk/image/upload/v1780969762/team_u6czmq.avif"
                 alt="Our team at work"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>

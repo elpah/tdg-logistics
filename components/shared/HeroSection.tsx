@@ -14,7 +14,7 @@ export default function HeroSection({
   image,
 }: HeroProps) {
   return (
-    <section className="relative h-150 overflow-hidden mt-20">
+    <section className="relative h-150 overflow-hidden mt-16 lg:mt-22">
       {image && (
         <Image
           src={image}
