@@ -10,7 +10,7 @@ const easeOutExpo = [0.22, 1, 0.36, 1] as const;
 
 const HomeHero = () => {
   return (
-    <section className="relative pt-14 lg:pt-20">
+    <section className="relative pt-20 lg:pt-20">
       <div className="relative min-h-175 w-full overflow-hidden lg:min-h-200">
         {/* Background Image */}
         <div className="absolute inset-0">
@@ -66,9 +66,9 @@ const HomeHero = () => {
                 transition={{ duration: 0.6, delay: 0.7, ease: easeOutExpo }}
                 className="mt-6 max-w-2xl text-sm leading-relaxed text-primary-foreground/80 sm:text-lg md:text-xl"
               >
-                Whether you're buying from factories, wholesalers, or online
-                marketplaces, our team receives, stores, and ships your goods
-                safely from China to Ghana.
+                Whether you&apos;re buying from factories, wholesalers, or
+                online marketplaces, our team receives, stores, and ships your
+                goods safely from China to Ghana.
               </motion.p>
 
               {/* CTA Buttons */}

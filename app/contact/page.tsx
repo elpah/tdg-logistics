@@ -1,7 +1,7 @@
 import Card from "@/components/contact/Cards";
 import ContactForm from "@/components/contact/ContactForm";
 import HeroSection from "@/components/shared/HeroSection";
-import { Phone, Mail, MapPin, MessageCircle, Clock, Send } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle, Clock } from "lucide-react";
 
 const contactInfo = [
   {

@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone, Contact } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navigation = [
@@ -16,9 +16,13 @@ const navigation = [
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const initialPath = useRef(pathname);
 
   useEffect(() => {
-    setMobileMenuOpen(false);
+    if (pathname !== initialPath.current) {
+      setMobileMenuOpen(false);
+      initialPath.current = pathname;
+    }
   }, [pathname]);
 
   return (
@@ -26,8 +30,8 @@ const Navbar = () => {
       <nav className="px-4 sm:px-6 py-3 lg:px-8">
         <div className="flex items-center justify-between mx-auto max-w-7xl">
           {/* Logo */}
-          <Link href="/" className="flex items-left shrink-0">
-            <div className="relative w-28 h-10 sm:w-32 sm:h-12 lg:h-16">
+          <Link href="/" className="flex items-start shrink-0">
+            <div className="relative w-32 h-14 lg:h-16">
               <Image
                 src="https://res.cloudinary.com/dvwpuenzk/image/upload/v1782091880/tdd_logo_ksizmd.png"
                 alt="TDG Shipping & Logistics"
@@ -72,10 +76,10 @@ const Navbar = () => {
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden lg:flex lg:items-center  gap-x-4">
+          <div className="hidden lg:flex lg:items-center gap-x-4">
             <a
               href="tel:+233123456789"
-              className="flex md:hidden items-center gap-2 text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors"
+              className="flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors"
             >
               <Phone className="w-4 h-4" />
               <span>+233 12 345 6789</span>
@@ -152,9 +156,6 @@ const Navbar = () => {
                       }`}
                     >
                       {item.name}
-                      {isActive && (
-                        <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                      )}
                     </Link>
                   </motion.div>
                 );
