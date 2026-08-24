@@ -7,13 +7,15 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+233 59 7993 709",
+    value: "+233 12 345 6789",
+    href: "tel:+233123456789",
     description: "Mon-Fri 9am-6pm",
   },
   {
     icon: Mail,
     label: "Email",
     value: "info@tdgslogistics.com",
+    href: "mailto:info@tdgslogistics.com",
     description: "We reply within 24 hours",
   },
   {
@@ -55,10 +57,11 @@ export default function ContactPage() {
                   value={item.value}
                   description={item.description}
                   icon={item.icon}
+                  href={"href" in item ? item.href : undefined}
                 />
               ))}
               <a
-                href="https://wa.me/15551234567"
+                href="https://wa.me/233123456789"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 rounded-xl bg-[#13bb51] p-5 text-white transition-colors hover:bg-[#20BD5A]"

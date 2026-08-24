@@ -62,7 +62,7 @@ const sections = [
   {
     title: "10. Contact Us",
     body: [
-      "If you have any questions about these Terms of Service, please contact us at hello@tdgslogistics.com or +1 (555) 123-4567.",
+      "If you have any questions about these Terms of Service, please contact us at hello@tdgslogistics.com or +233 12 345 6789.",
     ],
   },
 ];

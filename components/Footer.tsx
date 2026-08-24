@@ -36,23 +36,42 @@ function FooterLink({
 function ContactItem({
   icon: Icon,
   label,
+  href,
   children,
 }: {
   icon: React.ElementType;
   label: string;
+  href?: string;
   children: React.ReactNode;
 }) {
-  return (
-    <li className="flex gap-3">
-      <Icon className="mt-0.5 size-4 shrink-0" />
+  const className =
+    "flex items-center gap-3 rounded-md text-inherit no-underline transition-[transform,color] duration-300 ease-out hover:-translate-y-px hover:text-white";
+
+  const content = (
+    <>
+      <Icon className="size-4 shrink-0" />
 
       <div>
-        <p className="text-sm text-primary-foreground/70">{label}</p>
+        <p className="text-sm text-primary-foreground/70 transition-colors duration-300 group-hover:text-white/80">
+          {label}
+        </p>
 
         {children}
       </div>
-    </li>
+    </>
   );
+
+  if (href) {
+    return (
+      <li>
+        <a href={href} className={`group ${className} cursor-pointer`}>
+          {content}
+        </a>
+      </li>
+    );
+  }
+
+  return <li className={`group ${className}`}>{content}</li>;
 }
 
 const Footer = () => {
@@ -68,9 +87,9 @@ const Footer = () => {
                   src="https://res.cloudinary.com/dvwpuenzk/image/upload/v1782091880/tdd_logo_ksizmd.png"
                   alt="TDG Shipping & Logistics"
                   fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  sizes="128px"
+                  quality={90}
                   className="object-contain"
-                  priority
                 />
               </div>
             </Link>
@@ -100,22 +119,20 @@ const Footer = () => {
             <FooterHeading>Contact Information</FooterHeading>
 
             <ul className="space-y-5">
-              <ContactItem icon={Phone} label="Call Us">
-                <a
-                  href="tel:+233597993709"
-                  className="text-sm font-medium transition-colors hover:text-white"
-                >
-                  +233 59 799 3709
-                </a>
+              <ContactItem
+                icon={Phone}
+                label="Call Us"
+                href="tel:+233123456789"
+              >
+                <p className="text-sm font-medium">+233 12 345 6789</p>
               </ContactItem>
 
-              <ContactItem icon={Mail} label="Email">
-                <a
-                  href="mailto:info@tdgslogistics.com"
-                  className="text-sm font-medium transition-colors hover:text-white"
-                >
-                  info@tdgslogistics.com
-                </a>
+              <ContactItem
+                icon={Mail}
+                label="Email"
+                href="mailto:info@tdgslogistics.com"
+              >
+                <p className="text-sm font-medium">info@tdgslogistics.com</p>
               </ContactItem>
 
               <ContactItem icon={MapPin} label="Office">
@@ -128,8 +145,8 @@ const Footer = () => {
         {/* Bottom */}
         <div className="mt-12 flex flex-col gap-4 border-t border-primary-foreground/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-sm text-primary-foreground/60">
-            © {new Date().getFullYear()} TDG&apos;s Logistics. All rights
-            reserved.
+            © {new Date().getFullYear()}{" "}
+            TDG&apos;s Logistics. All rights reserved.
           </p>
 
           <div className="flex gap-6">

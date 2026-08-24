@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
 
 import { QuoteButton } from "./CtaButton";
+import HeroImage from "@/components/shared/HeroImage";
 
 const easeOutExpo = [0.22, 1, 0.36, 1] as const;
 
@@ -14,13 +14,9 @@ const HomeHero = () => {
       <div className="relative min-h-175 w-full overflow-hidden lg:min-h-200">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <Image
+          <HeroImage
             src="https://res.cloudinary.com/dvwpuenzk/image/upload/v1780970061/home_e5rxhi.avif"
             alt="Global shipping and logistics operations"
-            fill
-            sizes="100vw"
-            priority
-            className="object-cover"
           />
         </div>
 

@@ -22,6 +22,7 @@ const HomeWhyChooseUs = ({ reasons }: HomeWhyChooseUsProps) => {
               alt="Fleet of delivery trucks"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
+              quality={75}
               className="object-cover"
             />
           </div>

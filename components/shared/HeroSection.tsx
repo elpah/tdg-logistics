@@ -1,4 +1,4 @@
-import Image from "next/image";
+import HeroImage from "@/components/shared/HeroImage";
 
 type HeroProps = {
   header?: string;
@@ -16,13 +16,9 @@ export default function HeroSection({
   return (
     <section className="relative h-150 overflow-hidden mt-20 lg:mt-22">
       {image && (
-        <Image
+        <HeroImage
           src={image}
           alt="Global shipping and logistics operations"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
         />
       )}
 

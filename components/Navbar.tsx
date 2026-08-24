@@ -36,7 +36,8 @@ const Navbar = () => {
                 src="https://res.cloudinary.com/dvwpuenzk/image/upload/v1782091880/tdd_logo_ksizmd.png"
                 alt="TDG Shipping & Logistics"
                 fill
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="128px"
+                quality={90}
                 className="object-contain"
                 priority
               />

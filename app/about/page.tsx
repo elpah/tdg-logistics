@@ -63,7 +63,8 @@ function GalleryImage({ src, alt }: { src: string; alt: string }) {
         src={src}
         alt={alt}
         fill
-        sizes="(max-width: 768px) 100vw, 50vw"
+        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+        quality={75}
         className="object-cover transition-transform duration-500 group-hover:scale-105"
       />
     </div>
@@ -96,6 +97,7 @@ export default function AboutPage() {
                 alt="Our team at work"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
+                quality={75}
                 className="object-cover"
               />
             </div>
