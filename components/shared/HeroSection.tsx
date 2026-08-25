@@ -28,7 +28,7 @@ export default function HeroSection({
         <div className="mx-auto w-full max-w-7xl ">
           <div className="max-w-3xl ">
             {header && (
-              <p className="inline-flex rounded-lg bg-white/10 px-4 py-1 text-xs md:text-sm md:py-2 font-medium text-white backdrop-blur-sm">
+              <p className="inline-flex rounded-lg bg-primary-foreground/10 px-4 py-1 text-xs md:text-sm md:py-2 font-medium text-primary-foreground backdrop-blur-sm">
                 {header}
               </p>
             )}
@@ -37,7 +37,7 @@ export default function HeroSection({
               {title}
             </h1>
 
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-primary-foreground/80">
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-primary-foreground/90">
               {paragraph}
             </p>
           </div>

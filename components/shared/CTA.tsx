@@ -11,9 +11,9 @@ const CTA = ({ title, paragraph }: CTAProps) => {
   return (
     <section className="px-6 py-24 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <div className="rounded-3xl bg-primary px-8 py-16 text-center shadow-xl md:px-16">
+        <div className="rounded-3xl bg-primary px-8 py-16 text-center shadow-md md:px-16">
           <motion.h2
-            className="mt-6 text-3xl md:text-4xl font-bold tracking-tight text-primary-foreground lg:text-5xl"
+            className="text-3xl md:text-4xl font-bold tracking-tight text-primary-foreground lg:text-5xl"
             initial={{
               opacity: 0,
               y: 30,
@@ -34,7 +34,7 @@ const CTA = ({ title, paragraph }: CTAProps) => {
           </motion.h2>
 
           <motion.p
-            className="mx-auto mt-6 max-w-2xl text-md md:text-lg leading-relaxed text-primary-foreground/80"
+            className="mx-auto mt-6 max-w-2xl text-md md:text-lg leading-relaxed text-primary-foreground/90"
             initial={{
               opacity: 0,
               y: 30,

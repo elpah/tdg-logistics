@@ -21,8 +21,8 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Office",
-    value: "123 Shipping Lane",
-    description: "Accra, Ghana",
+    value: "Afienya, Greater Accra Region, Ghana",
+    description: "GPS: GN-0860-7444",
   },
   {
     icon: Clock,
@@ -49,7 +49,7 @@ export default function ContactPage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Contact Info */}
-            <div className="space-y-6 grid gap-3 md:grid-cols-2 lg:grid-cols-1">
+            <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-1">
               {contactInfo.map((item) => (
                 <Card
                   key={item.label}
@@ -64,14 +64,16 @@ export default function ContactPage() {
                 href="https://wa.me/233123456789"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 rounded-xl bg-[#13bb51] p-5 text-white transition-colors hover:bg-[#20BD5A]"
+                className="flex min-h-11 items-center gap-3 rounded-xl bg-[#0B7A38] p-5 text-primary-foreground transition-colors duration-300 hover:bg-[#0C8A40]"
               >
                 <MessageCircle className="size-6 shrink-0" />
 
                 <div>
-                  <p className="font-semibold text-white">Chat on WhatsApp</p>
+                  <p className="font-semibold text-primary-foreground">
+                    Chat on WhatsApp
+                  </p>
 
-                  <p className="text-sm text-white/80">
+                  <p className="text-sm text-primary-foreground/90">
                     Quick response guaranteed
                   </p>
                 </div>
@@ -79,8 +81,8 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Form */}
-            <div className="lg:col-span-2 p-8 bg-card border border-border rounded-2xl">
-              <h2 className="text-2xl font-bold text-foreground mb-2">
+            <div className="rounded-xl border border-border bg-card p-6 md:p-8 lg:col-span-2">
+              <h2 className="mb-2 text-2xl font-bold tracking-tight text-foreground">
                 Request a Quote
               </h2>
               <p className="text-muted-foreground mb-8">
@@ -96,10 +98,10 @@ export default function ContactPage() {
       </section>
       <section className="bg-secondary px-6 py-12 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="overflow-hidden rounded-2xl">
+          <div className="overflow-hidden rounded-xl ring-1 ring-border/60">
             <iframe
               title="Our location"
-              src="https://www.google.com/maps?q=Stationsstraat+75,+Zaandam,+Netherlands&output=embed"
+              src="https://www.google.com/maps?q=5.806529,0.012329&z=16&output=embed"
               width="100%"
               height="400"
               style={{ border: 0 }}

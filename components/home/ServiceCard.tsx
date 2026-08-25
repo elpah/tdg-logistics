@@ -40,17 +40,19 @@ const ServiceCard = ({ icon, title, description, index }: ServiceCardProps) => {
         duration: 0.45,
         delay: index * 0.12,
       }}
-      className="group rounded-xl border border-border bg-card p-6 transition-shadow duration-300 hover:border-primary/30 hover:shadow-lg"
+      className="h-full"
     >
-      <div className="mb-4 flex size-12 items-center justify-center rounded-lg bg-primary/10 transition-colors group-hover:bg-primary/20">
-        <Icon className="size-6 text-primary" />
+      <div className="group h-full rounded-xl border border-border bg-card p-6 transition-[border-color,box-shadow,transform] duration-300 hover:-translate-y-px hover:border-primary/25 hover:shadow-sm motion-reduce:transition-none motion-reduce:hover:translate-y-0">
+        <div className="mb-4 flex size-12 items-center justify-center rounded-lg bg-primary/10 transition-colors group-hover:bg-primary/20">
+          <Icon className="size-6 text-primary" />
+        </div>
+
+        <h3 className="mb-2 text-lg font-semibold text-foreground">{title}</h3>
+
+        <p className="text-sm leading-relaxed text-muted-foreground">
+          {description}
+        </p>
       </div>
-
-      <h3 className="mb-2 text-lg font-semibold">{title}</h3>
-
-      <p className="text-sm leading-relaxed text-muted-foreground">
-        {description}
-      </p>
     </motion.div>
   );
 };

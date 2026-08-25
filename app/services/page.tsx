@@ -133,15 +133,13 @@ export default function ServicesPage() {
             <div
               key={service.id}
               id={service.id}
-              className={`grid lg:grid-cols-2 gap-12 items-center ${
-                index % 2 === 1 ? "lg:flex-row-reverse" : ""
-              }`}
+              className="grid items-center gap-12 lg:grid-cols-2"
             >
               <div className={index % 2 === 1 ? "lg:order-2" : ""}>
-                <div className="size-12 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
+                <div className="mb-6 flex size-12 items-center justify-center rounded-lg bg-primary/10">
                   <service.icon className="size-6 text-primary" />
                 </div>
-                <h2 className="text-3xl font-bold text-foreground mb-4">
+                <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground">
                   {service.title}
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-6">
@@ -151,13 +149,13 @@ export default function ServicesPage() {
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3">
                       <CheckCircle className="size-5 text-primary mt-0.5 shrink-0" />
-                      <span className="text-foreground">{feature}</span>
+                      <span className="text-sm text-foreground">{feature}</span>
                     </li>
                   ))}
                 </ul>
               </div>
               <div
-                className={`relative h-87.5 rounded-2xl overflow-hidden ${
+                className={`relative h-87.5 overflow-hidden rounded-2xl ring-1 ring-border/60 ${
                   index % 2 === 1 ? "lg:order-1" : ""
                 }`}
               >
@@ -180,10 +178,10 @@ export default function ServicesPage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-12">
             <div>
-              <p className="text-primary font-medium mb-2">
+              <p className="mb-2 text-sm font-medium tracking-wide text-primary">
                 Shipping Timelines
               </p>
-              <h2 className="text-3xl font-bold text-foreground mb-4">
+              <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground">
                 Estimated Transit Times
               </h2>
               <p className="text-muted-foreground mb-8">
@@ -194,9 +192,9 @@ export default function ServicesPage() {
                 {timelines.map((item) => (
                   <div
                     key={item.route}
-                    className="flex items-center justify-between p-4 bg-background rounded-lg border border-border"
+                    className="flex items-center justify-between gap-4 rounded-xl border border-border bg-card p-4 transition-[border-color,box-shadow] duration-300 hover:border-primary/25 hover:shadow-sm"
                   >
-                    <span className="font-medium text-foreground">
+                    <span className="text-sm font-medium text-foreground">
                       {item.route}
                     </span>
                     <span className="text-primary font-semibold flex items-center gap-2">
@@ -208,8 +206,10 @@ export default function ServicesPage() {
               </div>
             </div>
             <div>
-              <p className="text-primary font-medium mb-2">Types of Goods</p>
-              <h2 className="text-3xl font-bold text-foreground mb-4">
+              <p className="mb-2 text-sm font-medium tracking-wide text-primary">
+                Types of Goods
+              </p>
+              <h2 className="mb-4 text-3xl font-bold tracking-tight text-foreground">
                 What We Handle
               </h2>
               <p className="text-muted-foreground mb-8">
@@ -220,7 +220,7 @@ export default function ServicesPage() {
                 {goodsTypes.map((type) => (
                   <div
                     key={type}
-                    className="flex items-center gap-3 p-4 bg-background rounded-lg border border-border"
+                    className="flex items-center gap-3 rounded-xl border border-border bg-card p-4 transition-[border-color,box-shadow] duration-300 hover:border-primary/25 hover:shadow-sm"
                   >
                     <Truck className="size-5 text-primary shrink-0" />
                     <span className="text-foreground text-sm">{type}</span>

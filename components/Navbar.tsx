@@ -26,7 +26,7 @@ const Navbar = () => {
   }, [pathname]);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-slate-200/80 bg-[#fafaf9]">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background">
       <nav className="px-4 sm:px-6 py-3 lg:px-8">
         <div className="flex items-center justify-between mx-auto max-w-7xl">
           {/* Logo */}
@@ -39,7 +39,6 @@ const Navbar = () => {
                 sizes="128px"
                 quality={90}
                 className="object-contain"
-                priority
               />
             </div>
           </Link>
@@ -56,7 +55,7 @@ const Navbar = () => {
                   className={`relative px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
                     isActive
                       ? "text-primary"
-                      : "text-slate-600 hover:text-slate-900 hover:bg-slate-100/50"
+                      : "text-muted-foreground hover:bg-muted/70 hover:text-foreground"
                   }`}
                 >
                   {item.name}
@@ -80,22 +79,23 @@ const Navbar = () => {
           <div className="hidden lg:flex lg:items-center gap-x-4">
             <a
               href="tel:+233123456789"
-              className="flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors"
+              className="flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
             >
-              <Phone className="w-4 h-4" />
+              <Phone className="size-4" />
               <span>+233 12 345 6789</span>
             </a>
-            <Link href="/contact">
-              <button className="cursor-pointer rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition-all hover:bg-primary/90 hover:shadow-md active:scale-95">
-                Request Quote
-              </button>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition-all hover:bg-primary/90 hover:shadow-md"
+            >
+              Request Quote
             </Link>
           </div>
 
           {/* Mobile Toggle */}
           <button
             type="button"
-            className="relative rounded-lg p-2.5 transition-colors hover:bg-slate-100 lg:hidden"
+            className="relative rounded-lg p-3 text-foreground transition-colors hover:bg-muted lg:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           >
@@ -108,7 +108,7 @@ const Navbar = () => {
                   exit={{ rotate: 90, opacity: 0 }}
                   transition={{ duration: 0.15 }}
                 >
-                  <X className="w-5 h-5" />
+                  <X className="size-5" />
                 </motion.div>
               ) : (
                 <motion.div
@@ -118,7 +118,7 @@ const Navbar = () => {
                   exit={{ rotate: -90, opacity: 0 }}
                   transition={{ duration: 0.15 }}
                 >
-                  <Menu className="w-5 h-5" />
+                  <Menu className="size-5" />
                 </motion.div>
               )}
             </AnimatePresence>
@@ -134,7 +134,7 @@ const Navbar = () => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="overflow-hidden border-t border-slate-200/80 bg-[#fafaf9] lg:hidden"
+            className="overflow-hidden border-t border-border bg-background lg:hidden"
           >
             <div className="px-4 py-4 space-y-1">
               {navigation.map((item, index) => {
@@ -150,10 +150,10 @@ const Navbar = () => {
                     <Link
                       href={item.href}
                       onClick={() => setMobileMenuOpen(false)}
-                      className={`flex items-center justify-between rounded-lg px-4 py-3 text-sm font-medium transition-colors ${
+                      className={`flex min-h-11 items-center justify-between rounded-lg px-4 py-3 text-sm font-medium transition-colors ${
                         isActive
                           ? "bg-primary/10 text-primary"
-                          : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"
+                          : "text-muted-foreground hover:bg-muted hover:text-foreground"
                       }`}
                     >
                       {item.name}
@@ -162,21 +162,20 @@ const Navbar = () => {
                 );
               })}
 
-              <div className="pt-3 mt-3 border-t border-slate-200/80 space-y-3">
+              <div className="mt-3 space-y-3 border-t border-border pt-3">
                 <a
                   href="tel:+233123456789"
-                  className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-slate-600"
+                  className="flex min-h-11 items-center gap-2 px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
                 >
-                  <Phone className="w-4 h-4" />
+                  <Phone className="size-4" />
                   +233 12 345 6789
                 </a>
-                <Link href="/contact">
-                  <button
-                    className="w-full rounded-lg bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground shadow-sm active:scale-[0.98] transition-transform"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Request Quote
-                  </button>
+                <Link
+                  href="/contact"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="inline-flex min-h-11 w-full items-center justify-center rounded-lg bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground shadow-sm transition-colors hover:bg-primary/90"
+                >
+                  Request Quote
                 </Link>
               </div>
             </div>

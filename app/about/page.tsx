@@ -58,14 +58,14 @@ const gallery = [
 
 function GalleryImage({ src, alt }: { src: string; alt: string }) {
   return (
-    <div className="group relative h-48 overflow-hidden rounded-xl md:h-64">
+    <div className="group relative h-48 overflow-hidden rounded-xl ring-1 ring-border/60 md:h-64">
       <Image
         src={src}
         alt={alt}
         fill
         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
         quality={75}
-        className="object-cover transition-transform duration-500 group-hover:scale-105"
+        className="object-cover transition-transform duration-500 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
       />
     </div>
   );
@@ -91,7 +91,7 @@ export default function AboutPage() {
       <section className="px-6 py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="grid items-center gap-12 lg:grid-cols-2">
-            <div className="relative h-100 overflow-hidden rounded-2xl">
+            <div className="relative h-100 overflow-hidden rounded-2xl ring-1 ring-border/60">
               <Image
                 src="https://res.cloudinary.com/dvwpuenzk/image/upload/v1780969762/team_u6czmq.avif"
                 alt="Our team at work"
@@ -106,6 +106,7 @@ export default function AboutPage() {
               <SectionHeader
                 eyebrow="Our Story"
                 title="From Local Roots to Global Reach"
+                align="left"
               />
 
               <div className="space-y-4 leading-relaxed text-muted-foreground">

@@ -26,7 +26,7 @@ function FooterLink({
   return (
     <Link
       href={href}
-      className="text-sm text-primary-foreground/70 transition-colors hover:text-primary-foreground"
+      className="text-sm text-primary-foreground/85 transition-colors hover:text-primary-foreground"
     >
       {children}
     </Link>
@@ -45,14 +45,14 @@ function ContactItem({
   children: React.ReactNode;
 }) {
   const className =
-    "flex items-center gap-3 rounded-md text-inherit no-underline transition-[transform,color] duration-300 ease-out hover:-translate-y-px hover:text-white";
+    "flex items-center gap-3 rounded-md text-inherit no-underline transition-[transform,color] duration-300 ease-out hover:-translate-y-px hover:text-primary-foreground motion-reduce:transition-none motion-reduce:hover:translate-y-0";
 
   const content = (
     <>
       <Icon className="size-4 shrink-0" />
 
       <div>
-        <p className="text-sm text-primary-foreground/70 transition-colors duration-300 group-hover:text-white/80">
+        <p className="text-sm text-primary-foreground/80 transition-colors duration-300 group-hover:text-primary-foreground/90">
           {label}
         </p>
 
@@ -81,8 +81,8 @@ const Footer = () => {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
           {/* Company */}
           <div>
-            <Link href="/" className="  flex items-start shrink-0">
-              <div className="relative bg-white rounded w-28 h-10 sm:w-32 sm:h-12 lg:h-16">
+            <Link href="/" className="flex shrink-0 items-start">
+              <div className="relative h-10 w-28 rounded bg-primary-foreground sm:h-12 sm:w-32 lg:h-16">
                 <Image
                   src="https://res.cloudinary.com/dvwpuenzk/image/upload/v1782091880/tdd_logo_ksizmd.png"
                   alt="TDG Shipping & Logistics"
@@ -94,7 +94,7 @@ const Footer = () => {
               </div>
             </Link>
 
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-primary-foreground/70">
+            <p className="mt-4 max-w-sm text-sm leading-relaxed text-primary-foreground/85">
               Your trusted partner for global shipping and logistics solutions.
               Delivering reliable freight forwarding, customs clearance, and
               supply chain services across international markets.
@@ -136,7 +136,10 @@ const Footer = () => {
               </ContactItem>
 
               <ContactItem icon={MapPin} label="Office">
-                <p className="text-sm font-medium">Accra, Ghana</p>
+                <p className="text-sm font-medium">
+                  Afienya, Greater Accra Region, Ghana
+                </p>
+                <p className="text-sm font-medium">GPS: GN-0860-7444</p>
               </ContactItem>
             </ul>
           </div>
@@ -144,7 +147,7 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="mt-12 flex flex-col gap-4 border-t border-primary-foreground/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-sm text-primary-foreground/60">
+          <p className="text-sm text-primary-foreground/80">
             © {new Date().getFullYear()}{" "}
             TDG&apos;s Logistics. All rights reserved.
           </p>

@@ -84,7 +84,7 @@ export default function TermsOfServicePage() {
           <div className="space-y-12">
             {sections.map((section) => (
               <div key={section.title}>
-                <h2 className="text-2xl font-bold text-foreground mb-4">
+                <h2 className="mb-4 text-2xl font-bold tracking-tight text-foreground">
                   {section.title}
                 </h2>
                 <div className="space-y-4">

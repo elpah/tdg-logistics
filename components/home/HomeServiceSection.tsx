@@ -65,4 +65,4 @@ const HomeServiceSection = ({
     </section>
   );
 }
-export default HomeServiceSection
+export default HomeServiceSection;

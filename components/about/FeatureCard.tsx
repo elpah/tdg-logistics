@@ -11,7 +11,7 @@ const FeatureCard = ({
 }) => {
   return (
     <div
-      className={`rounded-2xl border border-border bg-background p-8 ${
+      className={`rounded-xl border border-border bg-card p-8 transition-[border-color,box-shadow,transform] duration-300 hover:-translate-y-px hover:border-primary/25 hover:shadow-sm motion-reduce:transition-none motion-reduce:hover:translate-y-0 ${
         centered ? "text-center" : ""
       }`}
     >
@@ -23,7 +23,7 @@ const FeatureCard = ({
         <Icon className="size-6 text-primary" />
       </div>
 
-      <h3 className="mb-4 text-2xl font-bold text-foreground">{title}</h3>
+      <h3 className="mb-3 text-xl font-semibold text-foreground">{title}</h3>
 
       <p className="leading-relaxed text-muted-foreground">{description}</p>
     </div>

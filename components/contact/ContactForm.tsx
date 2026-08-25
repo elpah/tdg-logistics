@@ -2,19 +2,59 @@
 import { useState } from "react";
 import { Send } from "lucide-react";
 
-export default function ContactForm() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    company: "",
-    service: "",
-    message: "",
-  });
+const emptyForm = {
+  name: "",
+  email: "",
+  phone: "",
+  company: "",
+  service: "",
+  message: "",
+};
 
-  const handleSubmit = (e: React.FormEvent) => {
+export default function ContactForm() {
+  const [formData, setFormData] = useState(emptyForm);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(formData);
+    if (isSubmitting) return;
+
+    setIsSubmitting(true);
+    setStatus("idle");
+    setErrorMessage("");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = (await response.json().catch(() => null)) as
+        | { error?: string }
+        | null;
+
+      if (!response.ok) {
+        setStatus("error");
+        setErrorMessage(
+          data?.error ||
+            "We could not send your request. Please try again or email us at info@tdgslogistics.com.",
+        );
+        return;
+      }
+
+      setStatus("success");
+      setFormData(emptyForm);
+    } catch {
+      setStatus("error");
+      setErrorMessage(
+        "We could not send your request. Please try again or email us at info@tdgslogistics.com.",
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -29,11 +69,10 @@ export default function ContactForm() {
   };
 
   const inputStyles =
-    "h-12 w-full rounded-lg border border-border bg-background px-4 text-sm text-foreground outline-none transition-all placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20";
+    "h-12 w-full rounded-lg border border-border bg-background px-4 text-sm text-foreground outline-none transition-all placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 disabled:opacity-70";
 
   return (
-    <div className="rounded-2xl md:border md:border-border bg-card p-0 md:p-8 md:shadow-sm">
-      <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-6">
         {/* Name + Email */}
         <div className="grid gap-6 md:grid-cols-2">
           <div>
@@ -51,6 +90,8 @@ export default function ContactForm() {
               value={formData.name}
               onChange={handleChange}
               required
+              disabled={isSubmitting}
+              autoComplete="name"
               className={inputStyles}
             />
           </div>
@@ -71,6 +112,8 @@ export default function ContactForm() {
               value={formData.email}
               onChange={handleChange}
               required
+              disabled={isSubmitting}
+              autoComplete="email"
               className={inputStyles}
             />
           </div>
@@ -93,6 +136,8 @@ export default function ContactForm() {
               placeholder="+233 55 000 0000"
               value={formData.phone}
               onChange={handleChange}
+              disabled={isSubmitting}
+              autoComplete="tel"
               className={inputStyles}
             />
           </div>
@@ -111,6 +156,8 @@ export default function ContactForm() {
               placeholder="Your Company"
               value={formData.company}
               onChange={handleChange}
+              disabled={isSubmitting}
+              autoComplete="organization"
               className={inputStyles}
             />
           </div>
@@ -130,6 +177,7 @@ export default function ContactForm() {
             name="service"
             value={formData.service}
             onChange={handleChange}
+            disabled={isSubmitting}
             className={inputStyles}
           >
             <option value="">Select a service</option>
@@ -159,19 +207,33 @@ export default function ContactForm() {
             placeholder="Tell us about your shipment, cargo type, origin, destination, quantity, and any special requirements..."
             value={formData.message}
             onChange={handleChange}
-            className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition-all placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 resize-none"
+            disabled={isSubmitting}
+            className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground outline-none transition-all placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 resize-none disabled:opacity-70"
           />
         </div>
+
+        {status === "success" && (
+          <p className="text-sm font-medium text-accent" role="status">
+            Thank you. Your request has been sent. We will be in touch as soon
+            as possible.
+          </p>
+        )}
+
+        {status === "error" && (
+          <p className="text-sm font-medium text-destructive" role="alert">
+            {errorMessage}
+          </p>
+        )}
 
         {/* Submit */}
         <button
           type="submit"
-          className="cursor-pointer inline-flex w-full items-center justify-center rounded-lg bg-primary px-6 py-3 font-medium text-primary-foreground transition-all hover:bg-primary/90 md:w-auto"
+          disabled={isSubmitting}
+          className="inline-flex min-h-11 w-full cursor-pointer items-center justify-center rounded-lg bg-primary px-6 py-3 font-medium text-primary-foreground transition-colors hover:bg-primary/90 disabled:pointer-events-none disabled:opacity-70 md:w-auto"
         >
           <Send className="mr-2 size-4" />
-          Send Message
+          {isSubmitting ? "Sending..." : "Send Message"}
         </button>
       </form>
-    </div>
   );
 }

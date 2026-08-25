@@ -9,7 +9,7 @@ type CardProps = {
 };
 
 const cardClassName =
-  "grid grid-cols-[2.5rem_1fr] gap-x-4 rounded-xl bg-secondary p-5 transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-px hover:shadow-[0_2px_8px_rgba(15,23,42,0.06)]";
+  "grid grid-cols-[2.5rem_1fr] gap-x-4 rounded-xl border border-border/80 bg-card p-5 transition-[transform,box-shadow,border-color] duration-300 ease-out hover:-translate-y-px hover:border-primary/25 hover:shadow-sm motion-reduce:transition-none motion-reduce:hover:translate-y-0";
 
 const Card = ({ label, value, description, icon: Icon, href }: CardProps) => {
   const content = (

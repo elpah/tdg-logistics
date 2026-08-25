@@ -38,23 +38,24 @@ function CountUp({
   active: boolean;
   delay: number;
 }) {
-  const finalValue = stat.format(stat.target);
-  const [display, setDisplay] = useState(finalValue);
+  const [progress, setProgress] = useState(0);
+  const display = active
+    ? stat.format(stat.target * easeOutCubic(progress))
+    : stat.format(stat.target);
 
   useEffect(() => {
     if (!active) return;
 
-    setDisplay(stat.format(0));
-
     let frame = 0;
     const delayId = window.setTimeout(() => {
+      setProgress(0);
       const startedAt = performance.now();
 
       const tick = (now: number) => {
-        const progress = Math.min(1, (now - startedAt) / DURATION_MS);
-        setDisplay(stat.format(stat.target * easeOutCubic(progress)));
+        const next = Math.min(1, (now - startedAt) / DURATION_MS);
+        setProgress(next);
 
-        if (progress < 1) {
+        if (next < 1) {
           frame = window.requestAnimationFrame(tick);
         }
       };
@@ -66,15 +67,15 @@ function CountUp({
       window.clearTimeout(delayId);
       window.cancelAnimationFrame(frame);
     };
-  }, [active, delay, stat]);
+  }, [active, delay]);
 
   return (
-    <div className="text-center">
+    <div className="rounded-xl bg-background px-4 py-6 text-center ring-1 ring-border/70">
       <p className="text-4xl font-bold tabular-nums text-foreground md:text-5xl">
         {display}
       </p>
 
-      <p className="mt-2 text-primary">{stat.label}</p>
+      <p className="mt-2 text-sm font-medium text-primary">{stat.label}</p>
     </div>
   );
 }

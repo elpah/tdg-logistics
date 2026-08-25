@@ -16,7 +16,7 @@ const HomeWhyChooseUs = ({ reasons }: HomeWhyChooseUsProps) => {
     <section className="px-6 py-20 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="grid items-center gap-12 lg:grid-cols-2">
-          <div className="relative h-100 overflow-hidden rounded-2xl lg:h-125">
+          <div className="relative h-100 overflow-hidden rounded-2xl ring-1 ring-border/60 lg:h-125">
             <Image
               src="https://res.cloudinary.com/dvwpuenzk/image/upload/v1780969759/fleet_rlsi9z.avif"
               alt="Fleet of delivery trucks"
@@ -31,6 +31,7 @@ const HomeWhyChooseUs = ({ reasons }: HomeWhyChooseUsProps) => {
             <HomeSectionHeader
               eyebrow="Why Choose Us"
               title="Your Trusted Logistics Partner"
+              align="left"
             />
 
             <motion.p

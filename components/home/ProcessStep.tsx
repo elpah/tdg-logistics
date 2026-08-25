@@ -34,8 +34,8 @@ const ProcessStep = ({
         delay: index * 0.12,
       }}
     >
-      <div className="mb-4 text-6xl font-bold text-primary/10">{number}</div>
-      <h3 className="mb-2 text-lg font-semibold">{title}</h3>
+      <div className="mb-4 text-6xl font-bold text-primary/20">{number}</div>
+      <h3 className="mb-2 text-lg font-semibold text-foreground">{title}</h3>
       <p className="text-sm leading-relaxed text-muted-foreground">
         {description}
       </p>

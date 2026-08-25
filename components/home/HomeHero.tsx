@@ -32,7 +32,7 @@ const HomeHero = () => {
                 initial={{ opacity: 0, y: 25 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2, ease: easeOutExpo }}
-                className="inline-flex rounded-full bg-white/10 px-4 py-1 text-xs font-medium text-white backdrop-blur-sm md:py-2 md:text-sm"
+                className="inline-flex rounded-full bg-primary-foreground/10 px-4 py-1 text-xs font-medium text-primary-foreground backdrop-blur-sm md:py-2 md:text-sm"
               >
                 Global Logistics Solutions
               </motion.span>
@@ -60,7 +60,7 @@ const HomeHero = () => {
                 initial={{ opacity: 0, y: 25 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.7, ease: easeOutExpo }}
-                className="mt-6 max-w-2xl text-sm leading-relaxed text-primary-foreground/80 sm:text-lg md:text-xl"
+                className="mt-6 max-w-2xl text-sm leading-relaxed text-primary-foreground/90 sm:text-lg md:text-xl"
               >
                 Whether you&apos;re buying from factories, wholesalers, or
                 online marketplaces, our team receives, stores, and ships your
@@ -78,7 +78,7 @@ const HomeHero = () => {
 
                 <Link
                   href="/services"
-                  className="inline-flex items-center justify-center rounded-sm bg-white/10 px-6 py-4 text-base font-medium text-white backdrop-blur-sm transition-colors hover:bg-white/20"
+                  className="inline-flex items-center justify-center rounded-sm bg-primary-foreground/10 px-6 py-4 text-base font-medium text-primary-foreground backdrop-blur-sm transition-colors hover:bg-primary-foreground/20"
                 >
                   Our Services
                 </Link>

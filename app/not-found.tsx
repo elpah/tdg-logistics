@@ -16,14 +16,14 @@ export default function NotFound() {
         <div className="mt-8 flex justify-center gap-4">
           <Link
             href="/"
-            className="rounded-sm bg-primary px-6 py-3 text-primary-foreground hover:bg-primary/90"
+            className="rounded-sm bg-primary px-6 py-3 text-primary-foreground transition-colors hover:bg-primary/90"
           >
             Back Home
           </Link>
 
           <Link
             href="/contact"
-            className="rounded-sm border px-6 py-3 hover:bg-muted"
+            className="rounded-sm border border-border px-6 py-3 transition-colors hover:bg-muted"
           >
             Contact Us
           </Link>
