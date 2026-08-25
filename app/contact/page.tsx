@@ -39,8 +39,7 @@ export default function ContactPage() {
       <HeroSection
         header="Contact Us"
         title="Get in Touch"
-        paragraph=" Have questions about our services? Need a quote? We are here to
-              help. Reach out and our team will get back to you promptly."
+        paragraph="Have questions about our services? Need a quote? We are here to help. Reach out and our team will get back to you promptly."
         image="https://res.cloudinary.com/dvwpuenzk/image/upload/v1780969714/contact_pyxcqi.avif"
       />
 

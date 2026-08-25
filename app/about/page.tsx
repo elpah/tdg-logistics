@@ -78,9 +78,7 @@ export default function AboutPage() {
       <HeroSection
         header="About Us"
         title="Your Partner in Global Logistics"
-        paragraph="TDG's Shipping & Logistics was founded with a simple mission: to make
-        global shipping accessible, reliable, and stress-free for businesses
-        of all sizes."
+        paragraph="TDG's Shipping & Logistics was founded with a simple mission: to make global shipping accessible, reliable, and stress-free for businesses of all sizes."
         image="https://res.cloudinary.com/dvwpuenzk/image/upload/v1780969712/about_uyq8wo.avif"
       />
 

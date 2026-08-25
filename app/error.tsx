@@ -2,7 +2,7 @@
 
 export default function Error({ reset }: { error: Error; reset: () => void }) {
   return (
-    <div className="flex min-h-screen items-center justify-center">
+    <div className="flex min-h-screen items-center justify-center px-6">
       <div className="text-center">
         <h1 className="text-4xl font-bold">Something went wrong</h1>
 

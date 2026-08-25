@@ -32,7 +32,7 @@ const HowItWorksSection = ({ steps }: HowItWorksSectionProps) => {
                 index={index}
               />
               {index < steps.length - 1 && (
-                <div className="absolute top-8 left-[50%] hidden w-[40%] border-t-2 border-dashed border-primary/20 lg:block" />
+                <div className="absolute top-8 left-1/2 hidden w-[calc(100%+2rem)] border-t-2 border-dashed border-primary/20 lg:block" />
               )}
             </div>
           ))}

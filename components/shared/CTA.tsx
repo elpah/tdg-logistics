@@ -34,7 +34,7 @@ const CTA = ({ title, paragraph }: CTAProps) => {
           </motion.h2>
 
           <motion.p
-            className="mx-auto mt-6 max-w-2xl text-md md:text-lg leading-relaxed text-primary-foreground/90"
+            className="mx-auto mt-6 max-w-2xl text-base md:text-lg leading-relaxed text-primary-foreground/90"
             initial={{
               opacity: 0,
               y: 30,

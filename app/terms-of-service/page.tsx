@@ -71,6 +71,7 @@ export default function TermsOfServicePage() {
   return (
     <main className="min-h-screen bg-background">
       <HeroSection
+        header="Legal"
         title="Terms of Service"
         paragraph="Please read these terms carefully before using our logistics services."
         image="https://res.cloudinary.com/dvwpuenzk/image/upload/v1780969711/terms_phifbv.avif"

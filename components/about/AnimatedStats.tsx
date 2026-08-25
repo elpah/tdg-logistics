@@ -14,7 +14,7 @@ const stats: Stat[] = [
   {
     target: 10000,
     label: "Shipments Delivered",
-    format: (n) => `${Math.round(n / 1000)}K+`,
+    format: (n) => (Math.round(n) >= 10000 ? "10K+" : `${Math.round(n)}`),
   },
   {
     target: 98,
@@ -70,7 +70,7 @@ function CountUp({
   }, [active, delay]);
 
   return (
-    <div className="rounded-xl bg-background px-4 py-6 text-center ring-1 ring-border/70">
+    <div className="px-4 py-6 text-center">
       <p className="text-4xl font-bold tabular-nums text-foreground md:text-5xl">
         {display}
       </p>

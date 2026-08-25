@@ -121,8 +121,7 @@ export default function ServicesPage() {
       <HeroSection
         header="Our Services"
         title="Reliable Logistics Services"
-        paragraph=" From sea and air freight to customs clearance and last-mile
-              delivery, we offer end-to-end services tailored to your needs."
+        paragraph="From sea and air freight to customs clearance and last-mile delivery, we offer end-to-end services tailored to your needs."
         image="https://res.cloudinary.com/dvwpuenzk/image/upload/v1780969714/services_m9o094.avif"
       />
 
@@ -192,12 +191,12 @@ export default function ServicesPage() {
                 {timelines.map((item) => (
                   <div
                     key={item.route}
-                    className="flex items-center justify-between gap-4 rounded-xl border border-border bg-card p-4 transition-[border-color,box-shadow] duration-300 hover:border-primary/25 hover:shadow-sm"
+                    className="flex items-start justify-between gap-4 rounded-xl border border-border bg-card p-4 transition-[border-color,box-shadow] duration-300 hover:border-primary/25 hover:shadow-sm"
                   >
-                    <span className="text-sm font-medium text-foreground">
+                    <span className="min-w-0 text-sm font-medium text-foreground">
                       {item.route}
                     </span>
-                    <span className="text-primary font-semibold flex items-center gap-2">
+                    <span className="flex shrink-0 items-center gap-2 font-semibold text-primary">
                       <Clock className="size-4" />
                       {item.duration}
                     </span>
@@ -223,7 +222,7 @@ export default function ServicesPage() {
                     className="flex items-center gap-3 rounded-xl border border-border bg-card p-4 transition-[border-color,box-shadow] duration-300 hover:border-primary/25 hover:shadow-sm"
                   >
                     <Truck className="size-5 text-primary shrink-0" />
-                    <span className="text-foreground text-sm">{type}</span>
+                    <span className="min-w-0 text-sm text-foreground">{type}</span>
                   </div>
                 ))}
               </div>
@@ -235,8 +234,7 @@ export default function ServicesPage() {
       {/* CTA */}
       <CTA
         title="Need a Custom Solution?"
-        paragraph="Every business is unique. Contact us to discuss your specific
-            logistics requirements."
+        paragraph="Every business is unique. Contact us to discuss your specific logistics requirements."
       />
     </main>
   );

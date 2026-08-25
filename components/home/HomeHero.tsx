@@ -10,7 +10,7 @@ const easeOutExpo = [0.22, 1, 0.36, 1] as const;
 
 const HomeHero = () => {
   return (
-    <section className="relative pt-20 lg:pt-20">
+    <section className="relative pt-20 lg:pt-22">
       <div className="relative min-h-175 w-full overflow-hidden lg:min-h-200">
         {/* Background Image */}
         <div className="absolute inset-0">

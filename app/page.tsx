@@ -68,10 +68,8 @@ export default function Home() {
       <HowItWorksSection steps={steps} />
       <HomeWhyChooseUs reasons={reasons} />
       <CTA
-        title=" Ready to Ship Your Cargo?"
-        paragraph=" Whether you're moving a single shipment or managing a complex supply
-        chain, our logistics experts are ready to help. Get a fast,
-        transparent quote tailored to your business needs."
+        title="Ready to Ship Your Cargo?"
+        paragraph="Whether you're moving a single shipment or managing a complex supply chain, our logistics experts are ready to help. Get a fast, transparent quote tailored to your business needs."
       />
     </main>
   );

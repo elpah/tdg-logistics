@@ -13,7 +13,7 @@ export default function NotFound() {
           moved.
         </p>
 
-        <div className="mt-8 flex justify-center gap-4">
+        <div className="mt-8 flex flex-wrap justify-center gap-4">
           <Link
             href="/"
             className="rounded-sm bg-primary px-6 py-3 text-primary-foreground transition-colors hover:bg-primary/90"

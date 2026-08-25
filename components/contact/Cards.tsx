@@ -22,7 +22,7 @@ const Card = ({ label, value, description, icon: Icon, href }: CardProps) => {
         </div>
       </div>
 
-      <p className="col-start-2 row-start-2 font-semibold text-foreground">
+      <p className="col-start-2 row-start-2 min-w-0 font-semibold text-foreground">
         {value}
       </p>
 

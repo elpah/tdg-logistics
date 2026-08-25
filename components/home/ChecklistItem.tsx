@@ -9,7 +9,7 @@ type ChecklistItemProps = {
 const ChecklistItem = ({ children, index }: ChecklistItemProps) => {
   return (
     <motion.li
-      className="flex items-center gap-3"
+      className="flex min-w-0 items-center gap-3"
       initial={{
         opacity: 0,
         y: 20,

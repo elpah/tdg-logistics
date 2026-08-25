@@ -45,11 +45,11 @@ function ContactItem({
   children: React.ReactNode;
 }) {
   const className =
-    "flex items-center gap-3 rounded-md text-inherit no-underline transition-[transform,color] duration-300 ease-out hover:-translate-y-px hover:text-primary-foreground motion-reduce:transition-none motion-reduce:hover:translate-y-0";
+    "flex items-start gap-3 rounded-md text-inherit no-underline transition-[transform,color] duration-300 ease-out hover:-translate-y-px hover:text-primary-foreground motion-reduce:transition-none motion-reduce:hover:translate-y-0";
 
   const content = (
     <>
-      <Icon className="size-4 shrink-0" />
+      <Icon className="mt-0.5 size-4 shrink-0" />
 
       <div>
         <p className="text-sm text-primary-foreground/80 transition-colors duration-300 group-hover:text-primary-foreground/90">
