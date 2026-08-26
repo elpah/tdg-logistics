@@ -146,13 +146,25 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="mt-12 flex flex-col gap-4 border-t border-primary-foreground/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-12 flex flex-col items-center gap-4 border-t border-primary-foreground/10 pt-8 text-center sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:text-left lg:grid lg:grid-cols-3">
           <p className="text-sm text-primary-foreground/80">
             © {new Date().getFullYear()}{" "}
             TDG&apos;s Logistics. All rights reserved.
           </p>
 
-          <div className="flex gap-6">
+          <p className="order-3 w-full text-center text-sm text-primary-foreground/70 lg:order-none lg:w-auto">
+            Designed and developed by{" "}
+            <a
+              href="http://paruah.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary-foreground/85 underline-offset-2 transition-colors hover:text-primary-foreground hover:underline"
+            >
+              Paruah Systems
+            </a>
+          </p>
+
+          <div className="order-2 flex justify-center gap-6 sm:justify-end lg:order-none">
             <FooterLink href="/privacy-policy">Privacy Policy</FooterLink>
 
             <FooterLink href="/terms-of-service">Terms of Service</FooterLink>
