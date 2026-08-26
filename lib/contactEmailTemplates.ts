@@ -9,11 +9,11 @@ export type QuoteEmailContent = {
 
 const LOGO_SRC =
   "https://res.cloudinary.com/dvwpuenzk/image/upload/c_limit,w_200,q_auto/v1782091880/tdd_logo_ksizmd.png";
-const PHONE_DISPLAY = "+233 12 345 6789";
-const PHONE_HREF = "tel:+233123456789";
+const PHONE_DISPLAY = "+233 59 799 3709";
+const PHONE_HREF = "tel:+233597993709";
 const EMAIL_DISPLAY = "info@tdgslogistics.com";
 const EMAIL_HREF = "mailto:info@tdgslogistics.com";
-const WHATSAPP_HREF = "https://wa.me/233123456789";
+const WHATSAPP_HREF = "https://wa.me/233597993709";
 
 const BLUE = "#0064B9";
 const INK = "#0B121A";

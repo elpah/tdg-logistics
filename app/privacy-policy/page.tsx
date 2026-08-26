@@ -50,7 +50,7 @@ const sections = [
   {
     title: "8. Contact Us",
     body: [
-      "If you have any questions about this Privacy Policy or our data practices, please contact us at info@tdgslogistics.com or +233 12 345 6789.",
+      "If you have any questions about this Privacy Policy or our data practices, please contact us at info@tdgslogistics.com or +233 59 799 3709.",
     ],
   },
 ];

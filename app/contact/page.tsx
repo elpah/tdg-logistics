@@ -7,8 +7,8 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+233 12 345 6789",
-    href: "tel:+233123456789",
+    value: "+233 59 799 3709",
+    href: "tel:+233597993709",
     description: "Mon-Fri 9am-6pm",
   },
   {
@@ -60,7 +60,7 @@ export default function ContactPage() {
                 />
               ))}
               <a
-                href="https://wa.me/233123456789"
+                href="https://wa.me/233597993709"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex min-h-11 items-center gap-3 rounded-xl bg-[#0B7A38] p-5 text-primary-foreground transition-colors duration-300 hover:bg-[#0C8A40]"

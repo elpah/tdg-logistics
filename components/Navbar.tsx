@@ -78,11 +78,11 @@ const Navbar = () => {
           {/* Desktop CTA */}
           <div className="hidden lg:flex lg:items-center gap-x-4">
             <a
-              href="tel:+233123456789"
+              href="tel:+233597993709"
               className="flex items-center gap-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
             >
               <Phone className="size-4" />
-              <span>+233 12 345 6789</span>
+              <span>+233 59 799 3709</span>
             </a>
             <Link
               href="/contact"
@@ -164,11 +164,11 @@ const Navbar = () => {
 
               <div className="mt-3 space-y-3 border-t border-border pt-3">
                 <a
-                  href="tel:+233123456789"
+                  href="tel:+233597993709"
                   className="flex min-h-11 items-center gap-2 px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
                 >
                   <Phone className="size-4" />
-                  +233 12 345 6789
+                  +233 59 799 3709
                 </a>
                 <Link
                   href="/contact"

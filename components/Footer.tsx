@@ -122,9 +122,9 @@ const Footer = () => {
               <ContactItem
                 icon={Phone}
                 label="Call Us"
-                href="tel:+233123456789"
+                href="tel:+233597993709"
               >
-                <p className="text-sm font-medium">+233 12 345 6789</p>
+                <p className="text-sm font-medium">+233 59 799 3709</p>
               </ContactItem>
 
               <ContactItem
